@@ -7,4 +7,5 @@
 
 def handtodice(hand):
 	# your code goes here
-	pass
+	res= tuple(map(int,str(hand)))
+	return res
