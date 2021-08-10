@@ -7,6 +7,13 @@
 
 
 
-
+import math
 def fun_pascaltrianglevalue(row, col):
-	return 1
+	if (row<0 or col<0 or col>row):
+		return 0
+	else:
+		res1=math.factorial(row)
+		res2=math.factorial(col)
+		ans=math.factorial(row-col)
+		fin= res1//(res2*ans)
+		return fin
