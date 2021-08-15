@@ -16,22 +16,31 @@ def power(a, b):
     else:
         return a * power(a, b-1)
 
-
-
-
-
-
-
-
-
-
-
-
 def powerSum(n, k):
     # Your code goes here...
-    return 0
+    if n<0 or k<0:
+        return 0
+
+    else:
+        i=1
+        temp=0
+        while(i<=n):
+            temp=temp+power(i,k)
+            i=i+1
+        return temp
+        
 
 # Write your own test cases here...
 assert(powerSum(2,10) == 1025)
 assert(powerSum(3,10) == 60074)
 print ("All test cases passed...")
+
+
+
+
+
+
+
+
+
+
