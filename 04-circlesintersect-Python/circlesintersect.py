@@ -4,6 +4,13 @@
 # and the circle centered at (x2,y2) with radius r2, and returns True 
 # if the two circles intersect and False otherwise.
 
+import math as m
+def dis(x1,y1,x2,y2):
+	return m.sqrt((x2-x1)**2+(y2-y1)**2)
+
 def fun_circlesintersect(x1, y1, r1, x2, y2, r2):
 	# your code goes here
+	d=dis(x1,y1,x2,y2)
+	if d<=r1+r2:
+		return True
 	return False 
