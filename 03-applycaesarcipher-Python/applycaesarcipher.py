@@ -11,7 +11,21 @@
 
 
 def fun_applycaesarcipher(msg, shift):
-	return ""
+	lower_strt=97
+	upper_start=65
+	num_of_alphabets=26
+	str=""
+	for x in msg:
+		if lower_strt<=ord(x) and ord(x)<=lower_strt+num_of_alphabets:
+			str+=chr(((ord(x)+shift-lower_strt)%num_of_alphabets)+lower_strt)
+		elif upper_start<=ord(x) and ord(x)<=upper_start+num_of_alphabets:
+			str+=chr(((ord(x)+shift-upper_start)%num_of_alphabets)+upper_start)
+		else:
+			str+=x
+	
+		
+			
+	return str
 
 
 
