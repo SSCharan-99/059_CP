@@ -16,16 +16,10 @@ def fun_kth_occurrences(n, k):
             dic[i]=1
     
     res=[]
-    max=0
+
     ans=dict(sorted(dic.items(), key=lambda item: item[1]))
-    print(ans)
-    # for i,j in sorted(ans.items()):
-    #   if j>=max:    
-    #     res.append(i)
-    #     #print(res)
-    # return res
     li=[]
-    max=0
+
     for i,j in ans.items():
         li.append([i,j])
     return li[-k][0]
