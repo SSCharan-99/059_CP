@@ -8,7 +8,21 @@
 # Note: your function may not just create a copy of L and call the destructive version of this function (below) on 
 # that copy and return it. Instead, you must directly construct the result here.
 
-
 def shortenlongruns(L, k):
-	# Your code goes here
-	pass
+  cnt=1
+  for i in range(0,len(L)-1):
+    if(L[i]==L[i+1]):
+      cnt=cnt+1
+  co=1
+  res=[]
+  for j in range(0,len(L)-1):
+    if(L[j]==L[j+1]):
+      co=co+1
+      if(co>=k):
+        continue
+      res.append(L[j])
+    elif L[j]!=L[j+1]:
+      res.append(L[j])
+  res.append(L[-1])
+  return res
+      
