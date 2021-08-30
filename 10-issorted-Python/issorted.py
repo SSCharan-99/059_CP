@@ -7,4 +7,11 @@
 
 def issorted(a):
 	# your code goes here
-	pass
+	if a==sorted(a):
+		return True
+	elif a==sorted(a, reverse=True):
+		return True
+	elif len(a)==0:
+		return True
+	else:
+		return False
