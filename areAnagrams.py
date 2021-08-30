@@ -12,6 +12,12 @@
 
 def areAnagrams(s1, s2):
     # Your code goes here...
-    pass
+    if (len(s1)==len(s2)):
+        if(set(s1.lower())==set(s2.lower())):
+            return True
+    else:
+        return False
 
 # write your test cases here...
+
+print(areAnagrams("listen","silent"))
