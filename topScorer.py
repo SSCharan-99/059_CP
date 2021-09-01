@@ -13,15 +13,33 @@
 # in the same order they appeared in the original data. 
 # If nobody wins (there is no data), return None (not the 
 # string "None"). So, for example:
-
 def topScorer(data):
-    # Your code goes here...
-    return ""
+    Fred=[]
+    Wilma=[]
+    if(data==''):
+        return None
+    x=data.splitlines()
+    for i in x:
+        s=i.split(",")
+        for j in range(1,len(s)):
+            if(s[0]=="Fred"):
+                Fred.append(int(s[j]))
+            else:
+                Wilma.append(int(s[j]))
+    if(max(Fred)>max(Wilma)):
+        return "Fred"
+    elif(max(Fred)==max(Wilma)):
+        return "Fred,Wilma"
+    else:
+        return "Wilma"
+
+
 
 data = '''\
 Fred,10,20,30,40
 Wilma,10,20,30
 '''
+
 assert(topScorer(data) == 'Fred')
 
 data = '''\
